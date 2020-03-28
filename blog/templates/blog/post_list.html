@@ -7,27 +7,13 @@
         <h1><a href="/">Janet's Blog</a></h1>
     </div>
 
-    <div>
-        <p><i>published 28.03.2020, 14:05</i></p>
-        <h2><a href="">Living in Munich during lockdown</a></h2>
-        <p>Exit restriction in Munich: stay at home! In order to minimize the risk of infection for yourself and others, the general rule is: stay at home and avoid social contacts. Extensive exit restrictions have been in effect since Saturday, March 21. After that, you can essentially only leave the house to go to work, to the doctor, to buy groceries or to help others. Keep a distance of at least one and a half meters from other people. Walking and sporting exercise in the fresh air or going for a walk with the dog are permitted - but only on your own or with members of your own household. Any other group formation is prohibited.</p>
-        <p>
-         </p>
-        <p> </p>
-        <p> </p>
-    </div>
-
-    <div>
-        <p><i>published 28.03.2020, 15:08</i></p>
-        <h2><a href="">How to back a cake</a></h2>
-        <p><b>Ingredients</b></p>
-        <p>225g softened butter, 225g golden caster sugar, 4 large eggs, ½ lemon zested, 1 tsp vanilla extract, 225g self-raising flour, splash of milk</p>
-        <p> </p>
-        <p><b>Method</b></p>
-        <p>1. Heat oven to 180C/160C fan/gas 4, butter and line the base of two 20cm spring-form cake tins with baking parchment.</p>
-        <p>2. Using an electric whisk beat the butter and sugar together until pale and fluffy. Crack the eggs in one at a time and whisk well, scraping down the sides of the bowl after each addition. Add the lemon zest, vanilla, flour, milk and a pinch of salt. Whisk until just combined then divide the mixture between the two tins</p>
-        <p>3. Bake in the centre of the oven for 25-30 mins until a skewer inserted into the middle of each cake comes out clean. After 10 mins remove the cakes from their tins and leave to cool completely on a wire rack</p>
-    </div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</P>
+              <h2><a href="">{{ post.title }}</a></h2>
+              <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
   </body>
 </html>
